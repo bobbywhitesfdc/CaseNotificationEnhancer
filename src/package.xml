@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case Enhancer</fullName>
+    <description>This utility helps to improve the Chatter Email experience with Cases by adding in additional Case Context to all Chatter Posts on Cases.</description>
+    <types>
+        <members>CasePostEnhancer</members>
+        <members>CasePostEnhancerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>CasePostTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <version>31.0</version>
+</Package>
