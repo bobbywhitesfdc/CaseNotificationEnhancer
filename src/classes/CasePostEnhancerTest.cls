@@ -34,8 +34,8 @@ private class CasePostEnhancerTest {
     	
     	User[] existing = [SELECT Id,Name, UserName FROM User WHERE UserName IN(:USERID1,:USERID2,:USERID3)];
     	
-    	if (existing.size()==0) {
-    		Profile profile = [SELECT Id FROM Profile WHERE Name='Standard Platform User'];
+    	if (existing.isEmpty()) {
+    		Profile profile = [SELECT Id FROM Profile WHERE Name='Standard User'];
  
 		    user1 = new User(UserName=USERID1
 		           , FirstName='Bobby'
@@ -53,7 +53,7 @@ private class CasePostEnhancerTest {
     	}
     	
     	Account[] testAccounts = [SELECT Id, Name FROM Account WHERE Name=:TEST_ACCOUNT_NAME];
-    	if (testAccounts.size()==0) {
+    	if (testAccounts.isEmpty()) {
     	   account1 = new Account(Name=TEST_ACCOUNT_NAME);
 		   INSERT account1;
     		

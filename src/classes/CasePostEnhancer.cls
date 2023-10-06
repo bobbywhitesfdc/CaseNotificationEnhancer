@@ -122,7 +122,7 @@ public with sharing class CasePostEnhancer {
            ConnectApi.CommentInput commentInput = new ConnectApi.CommentInput();
            commentInput.body = new ConnectApi.MessageBodyInput();
            commentInput.body.messageSegments = mentions;
-           ConnectApi.ChatterFeeds.postComment(null, feedItem.Id, commentInput, null);
+           ConnectApi.ChatterFeeds.postCommentToFeedElement(null, (String)feedItem.Id, commentInput, null);  
         }
         
                
